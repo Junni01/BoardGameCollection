@@ -5,15 +5,15 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var index = require('./routes/index');
-var users = require('./routes/users');
-var saku = require('./routes/saku');
-var about = require('./routes/about');
+const index = require('./app_server/routes/index');
+const users = require('./app_server/routes/users');
+const saku = require('./app_server/routes/saku');
+const about = require('./app_server/routes/about');
 
 var app = express();
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'app_server', 'views'));
 app.set('view engine', 'pug');
 
 // uncomment after placing your favicon in /public
