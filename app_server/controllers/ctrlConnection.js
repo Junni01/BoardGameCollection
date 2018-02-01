@@ -2,4 +2,4 @@ const collection = function(req, res) {
     res.render('index');
 };
 
-module.exports = collection;
+module.exports = { collection };

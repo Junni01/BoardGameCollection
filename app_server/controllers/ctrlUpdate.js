@@ -1,5 +1,5 @@
 const update = function(req, res) {
-    res.render('index', { title: 'Board game collection' });
+    res.render('index');
 };
 
-module.exports = update;
+module.exports = { update };
