@@ -6,8 +6,8 @@ const ctrlConnection = require('../controllers/ctrlConnection');
 const ctrlUpdate = require('../controllers/ctrlUpdate');
 /* GET home page. */
 router.get('/', ctrlMain.index);
-router.get('/collection');
-router.get('/update');
+router.get('/collection', ctrlConnection.collection);
+router.get('/update', ctrlUpdate.update);
 
 
 module.exports = router;
