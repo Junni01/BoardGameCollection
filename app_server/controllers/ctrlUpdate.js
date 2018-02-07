@@ -1,5 +1,5 @@
 const update = function(req, res) {
-    res.render('index');
+    res.render('update');
 };
 
 module.exports = { update };

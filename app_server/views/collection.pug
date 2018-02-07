@@ -2,3 +2,11 @@ extends layout
 
 block content
     h1= 'My Collection'
+    table
+        each game in gameCollection
+            tr
+            th= game.name
+            th= 'Year: ' + game.year
+            th= 'Plays: ' + game.plays
+            th= 'Won: ' + game.won
+            th= 'Rating: ' + game.rating
