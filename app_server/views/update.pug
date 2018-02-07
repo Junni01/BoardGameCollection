@@ -2,4 +2,23 @@ extends layout
 
 block content
     h1= 'Log a game'
-    p ok
+    p In this section the user can log games he/she has played.
+    b Game name:
+    input
+    br
+    b Date:
+    input(type='date')
+    br
+    b Won?:
+    input(type='checkbox')
+    br
+    br
+    button Log a Game
+
+    h1= 'Played Games:'
+    table
+        each log in gameLog
+            tr
+            th= log.game
+            th= 'Date: ' + log.datePlayed
+            th= 'Won?: ' + log.won
