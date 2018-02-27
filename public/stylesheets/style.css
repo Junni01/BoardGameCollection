@@ -2,33 +2,34 @@
 
 
 body {
-  background: burlywood;
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+  background: cornflowerblue;
+  }
 
 a {
   color: darkblue;
-    padding: 20px;
 }
 
 table {
-  background: bisque;
+  background: lightblue;
+    border-radius: 10px 25px;
 
 }
 
 tr {
 
-
 }
 th {
 
-    border: solid black 1px;
+    bottom-border: solid black 1px;
     padding: 10px;
 }
 
-.Link {
+#mainimg {
 
-    font-size: 30px;
+    width: 400px;
+}
 
+#logo {
+
+    width: 40px;
 }
