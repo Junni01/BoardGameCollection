@@ -2,8 +2,8 @@ var express = require('express');
 var router = express.Router();
 
 const ctrlMain = require('../controllers/main');
-const ctrlConnection = require('../controllers/ctrlConnection');
-const ctrlUpdate = require('../controllers/ctrlUpdate');
+const ctrlCollection = require('../controllers/ctrlCollection');
+const ctrlPlays = require('../controllers/ctrlPlays');
 /* GET home page. */
 router.get('/', ctrlMain.index);
 router.get('/collection', ctrlConnection.collection);
