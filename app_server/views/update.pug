@@ -19,8 +19,8 @@ block content
 
     h1= 'Played Games:'
     table
-        each log in gameLog
+        each play in plays
             tr
-            th= log.game
-            th= 'Date: ' + log.datePlayed
-            th= 'Won?: ' + log.won
+            th= play.game
+            th= 'Date: ' + play.datePlayed
+            th= 'Won?: ' + play.won
