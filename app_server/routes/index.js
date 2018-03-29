@@ -7,7 +7,7 @@ const ctrlPlays = require('../controllers/ctrlPlays');
 /* GET home page. */
 router.get('/', ctrlMain.index);
 router.get('/collection', ctrlCollection.collection);
-router.get('/update', ctrlPlays.plays);
+router.get('/plays', ctrlPlays.plays);
 
 
 module.exports = router;
