@@ -107,5 +107,8 @@ const plays = function(req, res) {
 };
 
 module.exports = {
-    plays
+    plays,
+    showForm1,
+    addData1
+
 };
