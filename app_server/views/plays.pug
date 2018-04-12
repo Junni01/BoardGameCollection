@@ -1,21 +1,24 @@
 extends layout
 
 block content
-    h1= 'Log a game'
-    p In this section the user can log games he/she has played.
-    b Game name:
-    input
-    br
-    br
-    b Date:
-    input(type='date')
-    br
-    br
-    b Won?:
-    input(type='checkbox')
-    br
-    br
-    button Log a Game
+    .row
+        h1 Log a Game
+    form(action="", method="post")
+        .form-group.row
+            label Game name
+                input.form-control(name="name")
+
+        .form-group.row
+            label Date
+                input.form-control(name="date", type='date')
+
+        .form-group.row
+            label Won
+                input.form-control(name="won", type='checkbox')
+
+
+        .form-group.row
+            button.btn-primary Log a game
 
     h1= 'Played Games:'
     table
