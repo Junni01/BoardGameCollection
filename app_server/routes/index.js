@@ -14,4 +14,10 @@ router
     .get(ctrlCollection.showForm)
     .post(ctrlCollection.addData);
 
+router
+    .route('/plays')
+    .get(ctrlPlays.showForm1)
+    .post(ctrlPlays.addData1)
+
+
 module.exports = router;
