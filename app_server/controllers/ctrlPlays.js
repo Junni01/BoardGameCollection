@@ -25,9 +25,9 @@ const addData1 = function(req, res) {
     const path = '/api/plays';
 
     const postdata = {
-        name: req.body.name,
-        date: '0',
-        won: '0'
+        game: req.body.name,
+        datePlayed: req.body.date,
+        won: req.body.won
 
     };
 
