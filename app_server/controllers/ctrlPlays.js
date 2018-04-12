@@ -26,8 +26,8 @@ const addData1 = function(req, res) {
 
     const postdata = {
         name: req.body.name,
-        date: req.body.date,
-        won: req.body.won
+        date: '0',
+        won: '0'
 
     };
 
