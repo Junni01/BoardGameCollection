@@ -9,5 +9,9 @@ router.get('/', ctrlMain.index);
 router.get('/collection', ctrlCollection.collection);
 router.get('/plays', ctrlPlays.plays);
 
+router
+    .route('/collection/add')
+    .get(ctrlCollection.showForm)
+    .post(ctrlCollection.addData);
 
 module.exports = router;

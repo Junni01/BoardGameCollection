@@ -17,6 +17,59 @@ module.exports = { collection };*/
 const request = require('request');
 const apiURL = require('./apiURLs');
 
+const showForm = function (req, res) {
+    res.render('collection_add');
+};
+
+const addData = function(req, res) {
+
+    const path = '/api/collection';
+
+    const postdata = {
+        name: req.body.name,
+        year: req.body.year,
+        rating: req.body.rating,
+        plays: '0',
+        won: '0'
+
+
+    };
+
+    const requestOptions = {
+    url: apiURL.server + path,
+    method: 'POST',
+    json: postdata
+
+    };
+
+    request(
+        requestOptions,
+        function (err, response) {
+            if (response.statusCode === 201) {
+                res.redirect('/collection');
+            } else {
+                res.render('error', {message: 'Error adding data: ' +
+                response.statusMessage + ' (' + response.statusCode + ')'});
+            }
+        }
+    )
+
+
+
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
 const collection = function(req, res) {
     const path = '/api/collection';
     const requestOptions = {
@@ -50,6 +103,8 @@ request(
 };
 
 module.exports = {
-    collection
+    collection,
+    showForm,
+    addData
 };
 
