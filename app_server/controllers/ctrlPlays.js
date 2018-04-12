@@ -23,11 +23,19 @@ const showForm1 = function (req, res) {
 const addData1 = function(req, res) {
 
     const path = '/api/plays';
+    let gamewon;
+
+    if (req.body.won) {
+        gamewon = 'Yes'
+
+    } else {
+        gamewon = 'No'
+    }
 
     const postdata = {
         game: req.body.name,
         datePlayed: req.body.date,
-        won: req.body.won
+        won: gamewon
 
     };
 
